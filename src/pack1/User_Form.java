@@ -186,6 +186,19 @@ public class User_Form extends JApplet {
 		label_14.setFont(new Font("Segoe UI Light", Font.PLAIN, 13));
 		label_14.setBounds(218, 201, 63, 14);
 		panel.add(label_14);
+		
+		JButton button_1 = new JButton("Выход");
+		button_1.setFont(new Font("Segoe UI Light", Font.PLAIN, 13));
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				CardLayout cl = (CardLayout) getContentPane().getLayout();
+				Authorization_Form af = new Authorization_Form();
+				getContentPane().add(af, "Auth");
+				cl.show(getContentPane(), "Auth");
+			}
+		});
+		button_1.setBounds(10, 254, 89, 23);
+		panel.add(button_1);
 
 	}
 }

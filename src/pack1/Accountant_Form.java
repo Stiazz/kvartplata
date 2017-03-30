@@ -153,6 +153,24 @@ public class Accountant_Form extends JApplet {
 		label_13.setBounds(414, 263, 26, 23);
 		panel.add(label_13);
 		
+		JButton btnNewButton = new JButton("Рассчитать");
+		btnNewButton.setFont(new Font("Segoe UI Light", Font.PLAIN, 15));
+		btnNewButton.setBounds(140, 242, 165, 43);
+		panel.add(btnNewButton);
+		
+		JButton button = new JButton("Выход");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				CardLayout cl = (CardLayout) getContentPane().getLayout();
+				Authorization_Form af = new Authorization_Form();
+				getContentPane().add(af, "Auth");
+				cl.show(getContentPane(), "Auth");
+			}
+		});
+		button.setFont(new Font("Segoe UI Light", Font.PLAIN, 13));
+		button.setBounds(10, 264, 89, 23);
+		panel.add(button);
+		
 		}
 
 }
