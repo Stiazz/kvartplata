@@ -60,8 +60,25 @@ public class Authorization_Form extends JApplet {
 		JTextField_Login.setBounds(180, 113, 94, 20);
 		panel.add(JTextField_Login);
 
-JButton JButton_Enter = new JButton("Вход");
-JButton_Enter.setFont(new Font("Segoe UI Light", Font.PLAIN, 16));
+		JButton JButton_Enter = new JButton("Вход");
+		JButton_Enter.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Authorization a = new Authorization();
+				CardLayout cl = (CardLayout) getContentPane().getLayout();
+				if(a.auth(JTextField_Login.getText(), pass.getText()) == 1){
+					uf = new User_Form();
+					getContentPane().add(uf, "User");
+					cl.show(getContentPane(), "User");
+				}else if(a.auth(JTextField_Login.getText(), pass.getText()) == 2){
+					af = new Accountant_Form();
+					getContentPane().add(af, "Account");
+					cl.show(getContentPane(), "Account");
+				}else if(a.auth(JTextField_Login.getText(), pass.getText()) == 0){
+					label_Error.setText("Неправильный логин или пароль!");
+				}
+			}
+		});
+		JButton_Enter.setFont(new Font("Segoe UI Light", Font.PLAIN, 16));
 		JButton_Enter.setBounds(180, 198, 94, 31);
 		panel.add(JButton_Enter);
 	}
