@@ -22,6 +22,7 @@ public class Accountant_Form extends JApplet {
 	private JTextField textField_7;
 	private JTextField textField_8;
 	private JTextField textField_9;
+	Transmitter t;
 	/**
 	 * Create the applet.
 	 */
@@ -97,6 +98,24 @@ public class Accountant_Form extends JApplet {
 		label_11.setBounds(244, 136, 118, 23);
 		panel.add(label_11);
 		
+		JButton button = new JButton("Рассчитать");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double Itog = 0;
+				Itog = Double.parseDouble(textField_3.getText()) + Double.parseDouble(textField_4.getText())+
+						Double.parseDouble(textField_5.getText()) + Double.parseDouble(textField_6.getText()) + 
+						Double.parseDouble(textField_7.getText()) + Double.parseDouble(textField_8.getText()) +
+						Double.parseDouble(textField_9.getText()) + Double.parseDouble(textField.getText());
+				Itog = Math.rint(100.0*Itog)/100.0;
+				textField_2.setText(Double.toString(Itog));
+			}
+
+
+		});
+		button.setFont(new Font("Segoe UI Light", Font.PLAIN, 15));
+		button.setBounds(155, 255, 134, 34);
+		panel.add(button);
+		
 		textField_2 = new JTextField();
 		textField_2.setColumns(10);
 		textField_2.setBounds(326, 265, 86, 20);
@@ -153,24 +172,30 @@ public class Accountant_Form extends JApplet {
 		label_13.setBounds(414, 263, 26, 23);
 		panel.add(label_13);
 		
-		JButton btnNewButton = new JButton("Рассчитать");
-		btnNewButton.setFont(new Font("Segoe UI Light", Font.PLAIN, 15));
-		btnNewButton.setBounds(140, 242, 165, 43);
-		panel.add(btnNewButton);
-		
-		JButton button = new JButton("Выход");
-		button.addActionListener(new ActionListener() {
+		JButton button_1 = new JButton("Выход");
+		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CardLayout cl = (CardLayout) getContentPane().getLayout();
 				Authorization_Form af = new Authorization_Form();
 				getContentPane().add(af, "Auth");
 				cl.show(getContentPane(), "Auth");
+				
 			}
 		});
-		button.setFont(new Font("Segoe UI Light", Font.PLAIN, 13));
-		button.setBounds(10, 264, 89, 23);
-		panel.add(button);
+		button_1.setBounds(10, 264, 89, 23);
+		panel.add(button_1);
 		
-		}
+		JButton btnGive = new JButton("Принять данные");
+		btnGive.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				t = new Transmitter();
+				textField.setText(t.getA());
+				textField_1.setText(t.getB());
+			}
+		});
+		btnGive.setBounds(10, 36, 118, 23);
+		panel.add(btnGive);
+
+	}
 
 }

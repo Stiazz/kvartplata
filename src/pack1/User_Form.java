@@ -19,6 +19,7 @@ public class User_Form extends JApplet {
 	private JTextField textField_4;
 	private JTextField textField_6;
 	private JTextField textField_5;
+	Transmitter t;
 	
 	public User_Form() {
 		getContentPane().setLayout(new CardLayout());
@@ -105,6 +106,7 @@ public class User_Form extends JApplet {
 		JButton button = new JButton("Отправить показания");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				t = new Transmitter();
 				double Price_Flat = 0;
 				double Price_House = 0;
 			    double Hot_Water = Double.parseDouble(textField_1.getText());
@@ -116,12 +118,16 @@ public class User_Form extends JApplet {
 					double Gas_Flat = Double.parseDouble(textField_3.getText());
 					Price_Flat = Calculations.getPrice_Flat(Flat_Size, Hot_Water, Cold_Water, Gas_Flat, Electricity);
 					textField_6.setText(Double.toString(Price_Flat));
+					t.setA(textField_6.getText());
+					t.setB("Квартира");
 				}
 				if (radioButton_1.isSelected())
 				{
 					double Gas_House = Double.parseDouble(textField_5.getText());
 					Price_House = Calculations.getPrice_House(Cold_Water, Gas_House, Electricity);
 					textField_6.setText(Double.toString(Price_House));
+					t.setA(textField_6.getText());
+					t.setB("Частный дом");
 				}
 			}
 		});
