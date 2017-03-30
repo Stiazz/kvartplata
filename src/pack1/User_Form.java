@@ -1,4 +1,4 @@
-package pack1;
+﻿package pack1;
 
 import javax.swing.JApplet;
 import javax.swing.JPanel;

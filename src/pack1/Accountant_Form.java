@@ -1,4 +1,4 @@
-package pack1;
+п»їpackage pack1;
 
 import javax.swing.JApplet;
 import javax.swing.JPanel;
@@ -32,7 +32,7 @@ public class Accountant_Form extends JApplet {
 		getContentPane().add(panel, "Acc");
 		panel.setLayout(null);
 		
-		JLabel label = new JLabel("Показания жителя: коммунальные услуги");
+		JLabel label = new JLabel("РџРѕРєР°Р·Р°РЅРёСЏ Р¶РёС‚РµР»СЏ: РєРѕРјРјСѓРЅР°Р»СЊРЅС‹Рµ СѓСЃР»СѓРіРё");
 		label.setFont(new Font("Segoe UI Light", Font.PLAIN, 13));
 		label.setBounds(41, 11, 248, 23);
 		panel.add(label);
@@ -46,7 +46,7 @@ public class Accountant_Form extends JApplet {
 		label_1.setBounds(114, 90, 46, 14);
 		panel.add(label_1);
 		
-		JLabel label_2 = new JLabel("тип жилья");
+		JLabel label_2 = new JLabel("С‚РёРї Р¶РёР»СЊСЏ");
 		label_2.setFont(new Font("Segoe UI Light", Font.PLAIN, 13));
 		label_2.setBounds(155, 35, 76, 23);
 		panel.add(label_2);
@@ -56,43 +56,43 @@ public class Accountant_Form extends JApplet {
 		textField_1.setBounds(289, 37, 86, 20);
 		panel.add(textField_1);
 		
-		JLabel label_3 = new JLabel("Добавьте общедомовые услуги (в руб.)");
+		JLabel label_3 = new JLabel("Р”РѕР±Р°РІСЊС‚Рµ РѕР±С‰РµРґРѕРјРѕРІС‹Рµ СѓСЃР»СѓРіРё (РІ СЂСѓР±.)");
 		label_3.setHorizontalAlignment(SwingConstants.CENTER);
 		label_3.setFont(new Font("Segoe UI Light", Font.PLAIN, 13));
 		label_3.setBounds(80, 69, 282, 23);
 		panel.add(label_3);
 		
-		JLabel label_4 = new JLabel("Уборка подъезда");
+		JLabel label_4 = new JLabel("РЈР±РѕСЂРєР° РїРѕРґСЉРµР·РґР°");
 		label_4.setFont(new Font("Segoe UI Light", Font.PLAIN, 13));
 		label_4.setBounds(10, 103, 118, 23);
 		panel.add(label_4);
 		
-		JLabel label_5 = new JLabel("Освещение в подъезде");
+		JLabel label_5 = new JLabel("РћСЃРІРµС‰РµРЅРёРµ РІ РїРѕРґСЉРµР·РґРµ");
 		label_5.setFont(new Font("Segoe UI Light", Font.PLAIN, 13));
 		label_5.setBounds(10, 131, 150, 23);
 		panel.add(label_5);
 		
-		JLabel label_6 = new JLabel("Обслуживание лифта");
+		JLabel label_6 = new JLabel("РћР±СЃР»СѓР¶РёРІР°РЅРёРµ Р»РёС„С‚Р°");
 		label_6.setFont(new Font("Segoe UI Light", Font.PLAIN, 13));
 		label_6.setBounds(10, 158, 141, 23);
 		panel.add(label_6);
 		
-		JLabel label_8 = new JLabel("Обслуживание насосов");
+		JLabel label_8 = new JLabel("РћР±СЃР»СѓР¶РёРІР°РЅРёРµ РЅР°СЃРѕСЃРѕРІ");
 		label_8.setFont(new Font("Segoe UI Light", Font.PLAIN, 13));
 		label_8.setBounds(10, 183, 141, 23);
 		panel.add(label_8);
 		
-		JLabel label_9 = new JLabel("Промывка сист. водосн.");
+		JLabel label_9 = new JLabel("РџСЂРѕРјС‹РІРєР° СЃРёСЃС‚. РІРѕРґРѕСЃРЅ.");
 		label_9.setFont(new Font("Segoe UI Light", Font.PLAIN, 13));
 		label_9.setBounds(245, 103, 155, 23);
 		panel.add(label_9);
 		
-		JLabel label_10 = new JLabel("Кап. ремонт");
+		JLabel label_10 = new JLabel("РљР°Рї. СЂРµРјРѕРЅС‚");
 		label_10.setFont(new Font("Segoe UI Light", Font.PLAIN, 13));
 		label_10.setBounds(10, 209, 118, 23);
 		panel.add(label_10);
 		
-		JLabel label_11 = new JLabel("Уборка улицы");
+		JLabel label_11 = new JLabel("РЈР±РѕСЂРєР° СѓР»РёС†С‹");
 		label_11.setFont(new Font("Segoe UI Light", Font.PLAIN, 13));
 		label_11.setBounds(244, 136, 118, 23);
 		panel.add(label_11);
@@ -102,7 +102,7 @@ public class Accountant_Form extends JApplet {
 		textField_2.setBounds(326, 265, 86, 20);
 		panel.add(textField_2);
 		
-		JLabel label_12 = new JLabel("Итог");
+		JLabel label_12 = new JLabel("РС‚РѕРі");
 		label_12.setHorizontalAlignment(SwingConstants.CENTER);
 		label_12.setFont(new Font("Segoe UI Light", Font.PLAIN, 13));
 		label_12.setBounds(326, 241, 86, 23);
@@ -143,12 +143,12 @@ public class Accountant_Form extends JApplet {
 		textField_9.setBounds(384, 133, 56, 20);
 		panel.add(textField_9);
 		
-		JLabel label_7 = new JLabel("руб.");
+		JLabel label_7 = new JLabel("СЂСѓР±.");
 		label_7.setFont(new Font("Segoe UI Light", Font.PLAIN, 12));
 		label_7.setBounds(385, 11, 27, 23);
 		panel.add(label_7);
 		
-		JLabel label_13 = new JLabel("руб.");
+		JLabel label_13 = new JLabel("СЂСѓР±.");
 		label_13.setFont(new Font("Segoe UI Light", Font.PLAIN, 12));
 		label_13.setBounds(414, 263, 26, 23);
 		panel.add(label_13);
